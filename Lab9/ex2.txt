@@ -1,0 +1,105 @@
+2.
+a)Pentru IPv4
+
+dig A -f gazde.txt +short
+
+Output:
+142.250.185.78
+216.58.212.174
+www3.l.google.com.
+172.217.18.110
+185.60.218.35
+40.76.4.15
+40.112.72.205
+40.113.200.201
+13.77.161.179
+104.215.148.63
+
+
+b) pentru IPv6
+dig AAAA -f gazde.txt +short
+
+Output:
+2a00:1450:4001:808::200e
+2a00:1450:4001:813::200e
+www3.l.google.com.
+2a00:1450:4001:809::200e
+2a03:2880:f123:83:face:b00c:0:25de
+
+
+c) cereri MX
+dig MX -f gazde.txt protocoale.xyz +short
+
+Output:
+20 alt1.aspmx.l.google.com.
+30 alt2.aspmx.l.google.com.
+10 aspmx.l.google.com.
+50 alt4.aspmx.l.google.com.
+40 alt3.aspmx.l.google.com.
+www3.l.google.com.
+10 smtpin.vvv.facebook.com.
+10 microsoft-com.mail.protection.outlook.com.
+20 alt2.gmail-smtp-in.l.google.com.
+10 alt1.gmail-smtp-in.l.google.com.
+30 alt3.gmail-smtp-in.l.google.com.
+
+
+d) doar RR
+
+Comanda: dig maps.google.com +noall +answer
+
+Output: maps.google.com.	165	IN	A	216.58.212.174
+
+e) 
+
+
+f) 
+dig @8.8.8.8 ns +short -f gazde.txt
+
+Output:
+ns3.google.com.
+ns4.google.com.
+ns2.google.com.
+ns1.google.com.
+www3.l.google.com.
+d.ns.facebook.com.
+c.ns.facebook.com.
+b.ns.facebook.com.
+a.ns.facebook.com.
+ns1-205.azure-dns.com.
+ns2-205.azure-dns.net.
+ns3-205.azure-dns.org.
+ns4-205.azure-dns.info.
+dns1.registrar-servers.com.
+dns2.registrar-servers.com.
+
+
+g)
+
+dig +trace trace.dorinel.protocoale.xyz
+
+390993	IN	NS	a.root-servers.net.
+.			390993	IN	NS	l.root-servers.net.
+.			390993	IN	NS	g.root-servers.net.
+.			390993	IN	NS	h.root-servers.net.
+.			390993	IN	NS	b.root-servers.net.
+.			390993	IN	NS	j.root-servers.net.
+.			390993	IN	NS	d.root-servers.net.
+.			390993	IN	NS	i.root-servers.net.
+.			390993	IN	NS	e.root-servers.net.
+.			390993	IN	NS	m.root-servers.net.
+.			390993	IN	NS	c.root-servers.net.
+.			390993	IN	NS	k.root-servers.net.
+.			390993	IN	NS	f.root-servers.net.
+xyz.			172800	IN	NS	z.nic.xyz.
+xyz.			172800	IN	NS	y.nic.xyz.
+xyz.			172800	IN	NS	generationxyz.nic.xyz.
+xyz.			172800	IN	NS	x.nic.xyz.
+xyz.			86400	IN	DS	3599 8 2 B9733869BC84C86BB59D102BA5DA6B27B2088552332A39DCD54BC4E8 D66B0499
+xyz.			86400	IN	DS	3599 8 1 3FA3B264F45DB5F38BEDEAF1A88B76AA318C2C7F
+
+
+h)
+dig -x 8.8.8.8 +short
+
+Output: dns.google.
